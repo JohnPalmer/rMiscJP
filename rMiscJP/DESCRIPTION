@@ -1,9 +1,9 @@
 Package: rMiscJP
 Type: Package
-Title: What the package does (short line)
+Title: Miscellaneous R functions
 Version: 1.0
 Date: 2014-02-07
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: John R.B. Palmer
+Maintainer: John R.B. Palmer <johnrbpalmer@gmail.com>
+Description: A growing collection of miscellaneous R functions that I find useful.
+License: GPL 3
