@@ -1,4 +1,5 @@
 #' convert a matrix to a named vector in which the names are taken from the matrix row and column names
+#' @export
 matrix2vector = function(matrix) {unlist(lapply(1:ncol(x), function(i) lapply(1:nrow(x), function(j) {
   result = x[j,i]
   names(result) = paste(rownames(x)[j], colnames(x)[i], sep="_")
@@ -7,11 +8,13 @@ matrix2vector = function(matrix) {unlist(lapply(1:ncol(x), function(i) lapply(1:
 }
 
 #' create a timestamp of the current time in format that can be used in filename 
+#' @export
 timestampNow <- function() paste(unlist(strsplit(unlist(strsplit(as.character(Sys.time()), " ")), ":")), collapse="-")
 
 # vincenty bearing based on: http://www.r-bloggers.com/great-circle-distance-calculations-in-r/ and http://www.movable-type.co.uk/scripts/latlong-vincenty.html
 # Calculates the bearing at starting point in order to reach destination point following geodesic line over WGS-84 ellipsoid using Vincenty method
 #' calculate Vincenty bearing
+#' @export
 vincB <- function(lon1, lat1, lon2, lat2) {
   toRad = pi/180
   toDeg = 180/pi

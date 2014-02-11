@@ -1,1 +1,3 @@
-exportPattern("^[[:alpha:]]+")
+export(matrix2vector)
+export(timestampNow)
+export(vincB)
