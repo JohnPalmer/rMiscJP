@@ -64,3 +64,14 @@ vincB <- function(lon1, lat1, lon2, lat2) {
   
   return(fwdAz*toDeg) # bearing
 }
+
+
+#' convert seconds into formatted hour:minute:second
+#' @export
+formatSecs = function(secs){
+ hr <- floor(secs/(60*60))
+ min <-  floor((secs - (hr*60*60))/60)
+ sec <- round(secs - ((hr*60*60)+(min*60)),digits=2)
+return(paste(hr,min,sec,sep=':'))
+}
+
