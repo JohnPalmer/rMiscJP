@@ -75,3 +75,10 @@ formatSecs = function(secs){
 return(paste(hr,min,sec,sep=':'))
 }
 
+#' quickly convert spatial points object to spatial lines object (without any differentiation by ID)
+#' @export
+points2lines = function(spatialPointsObject){
+return(SpatialLines(list(Lines(Line(coordinates(spatialPointsObject)), ID="1")),proj4string=spatialPointsObject@proj4string))
+} 
+
+
